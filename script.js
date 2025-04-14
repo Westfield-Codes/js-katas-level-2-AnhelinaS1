@@ -17,9 +17,9 @@
 function main(){
     let operation = prompt("what operation do you want (+, -, *, /)?");
     let a = prompt("Enter the first number");
-    let a = parseInt();
+     a = parseInt();
     let b = prompt("Enter the second number");
-    let b = parseInt();
+     b = parseInt();
 
 }
 /* FUNCTION add(a,b)
