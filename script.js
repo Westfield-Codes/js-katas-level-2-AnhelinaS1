@@ -1,48 +1,62 @@
-/* ICE CREAM CONE KATA */
+/* CALCULATOR KATA */
 
-/* Var, Alert, Prompt, Conditional, While, Function. Global, Concatenation */
-
-/* Initialize Globals
- * Set a global variable myScoops = "Here's your cone with: "
- */
-var myScoops = "Here's your cone with:"
+/* This is best done with a JS switch control, though can also be a chain of conditionals. */
 
 /* FUNCTION main() 
- * initialize variable scoops, prompt user for "how many scoops (max 3)?"
- * if scoops is less than 4, call scoopLoop with argument scoops
- * otherwise display "oink oink" and call main again.
+ * Ask the user what operation they want (+, -, *, /)
+ * Ask the user for the first number (a)
+ * Parse a as an integer
+ * Ask the user for the second number (b)
+ * Parse b as an integer
+ * Based on the operation, send the numbers to the right function as
+ * arguments and store the returned value in variable called result
+ * Alert the equation a + operation + b = result
  * @param: none (main never gets params)
  * @return: none (main never gets returns
  */
 function main(){
-var scoops = prompt("how many scoops(max 3)?");
-if (scoops < 4) scoopLoop(scoops);
-else{
-alert ("oink oink");
-main();
+    let operation = prompt("what operation do you want (+, -, *, /)?");
+    let a = prompt("Enter the first number");
+    let a = parseInt();
+    let b = prompt("Enter the second number");
+    let b = parseInt();
+
 }
+/* FUNCTION add(a,b)
+ * define a function called add with two number parameters a and b
+ * @param: a, b (integers)
+ * @return: a + b
+ */
+function add(a,b){
+ return a+b;
 }
 
-/* FUNCTION scoopLoop(scoops) 
- * start scoop at 1 and loop while scoop is less than or equal to scoops
- * inside the loop add nextScoop(scoop) to myScoops
- * after the loop's done, display "Here's your cone with " myScoops
- * @param: scoops (integer)
- * @return: none
+/* FUNCTION subtract(a,b)
+ * define a function called subtract with two number parameters a and b
+ * @param: a, b (integers)
+ * @return: a - b
  */
-function scoopLoop(scoops){
-for(let scoop = 1;scoop <= scoops; scoop++){
-    myScoop +=nextScoop(scoops);
-}
-alert(myScoops);
+function subtract(a,b){
+return a-b;
 }
 
-/* FUNCTION nextScoop(scoop)
- * initialize a variable called flavor, prompt for "Flavor for scoop number [scoop]"
- * @param: scoop (integer)
- * @return: flavor (string)
+/* FUNCTION multiply(a,b)
+ * define a function called multiply with two number parameters a and b
+ * @param: a, b (integers)
+ * @return: a * b (* means multiply)
  */
-function nextScoop(scoop){
-let flavor = prompt("Flavor for scoop number " + scoop)
-return flavor;
+function multiply(a,b){
+return a*b;
+
 }
+
+/* FUNCTION divide(a,b)
+ * define a function called divide with two number parameters a and b
+ * @param: a, b (integers)
+ * @return: a / b (/ means divided by)
+ */
+function divide(a,b){
+    return a/b;
+}
+
+/* ************************************* */
