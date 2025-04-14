@@ -57,7 +57,6 @@
 /* ************************************* */
 
 /* CALCULATOR KATA */
-
 /* This is best done with a JS switch control, though can also be a chain of conditionals. */
 
 /* FUNCTION main() 
@@ -72,30 +71,50 @@
  * @param: none (main never gets params)
  * @return: none (main never gets returns
  */
+function main(){
+   let operation = prompt("what operation do you want (+, -, *, /)?");
+   let a = prompt("Enter the first number");
+    a = parseInt();
+   let b = prompt("Enter the second number");
+    b = parseInt();
 
+}
 /* FUNCTION add(a,b)
- * define a function called add with two number parameters a and b
- * @param: a, b (integers)
- * @return: a + b
- */
+* define a function called add with two number parameters a and b
+* @param: a, b (integers)
+* @return: a + b
+*/
+function add(a,b){
+return a+b;
+}
 
 /* FUNCTION subtract(a,b)
- * define a function called subtract with two number parameters a and b
- * @param: a, b (integers)
- * @return: a - b
- */
+* define a function called subtract with two number parameters a and b
+* @param: a, b (integers)
+* @return: a - b
+*/
+function subtract(a,b){
+return a-b;
+}
 
 /* FUNCTION multiply(a,b)
- * define a function called multiply with two number parameters a and b
- * @param: a, b (integers)
- * @return: a * b (* means multiply)
- */
+* define a function called multiply with two number parameters a and b
+* @param: a, b (integers)
+* @return: a * b (* means multiply)
+*/
+function multiply(a,b){
+return a*b;
+
+}
 
 /* FUNCTION divide(a,b)
- * define a function called divide with two number parameters a and b
- * @param: a, b (integers)
- * @return: a / b (/ means divided by)
- */
+* define a function called divide with two number parameters a and b
+* @param: a, b (integers)
+* @return: a / b (/ means divided by)
+*/
+function divide(a,b){
+   return a/b;
+}
 
 /* ************************************* */
 
@@ -127,7 +146,6 @@ alert ("oink oink");
 main();
 }
 }
-
 
 /* FUNCTION scoopLoop(scoops)
 * start scoop at 1 and loop while scoop is less than or equal to scoops
