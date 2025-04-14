@@ -18,7 +18,7 @@ function main(){
 var scoops = prompt("how many scoops(max 3)?");
 if (scoops < 4) scoopLoop(scoops);
 else{
-alert ("oink oink")
+alert ("oink oink");
 main();
 }
 }
@@ -33,9 +33,10 @@ main();
 function scoopLoop(scoops){
 for(let scoop = 1;scoop <= scoops; scoop++){
     myScoop +=nextScoop(scoops);
-    alert(myScoops);
 }
+alert(myScoops);
 }
+
 /* FUNCTION nextScoop(scoop)
  * initialize a variable called flavor, prompt for "Flavor for scoop number [scoop]"
  * @param: scoop (integer)
@@ -43,3 +44,5 @@ for(let scoop = 1;scoop <= scoops; scoop++){
  */
 function nextScoop(scoop){
 let flavor = prompt("Flavor for scoop number " + scoop)
+return flavor;
+}
