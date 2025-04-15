@@ -15,7 +15,6 @@
  * @return: none (main never gets returns
  */
 
-
 /* FUNCTION myAge(age)
  * define a function called myAge with number parameter age
  * Get thisYear using the date function https://www.w3schools.com/js/js_date_methods.asp
@@ -64,6 +63,7 @@
  * @param: none (main never gets params)
  * @return: none (main never gets returns)
  */
+
  // Ask the user what operation they want (+, -, *, /)
  // Ask the user for the first number (a)
  // Parse a as an integer
@@ -78,37 +78,27 @@
 * @param: a, b (integers)
 * @return: a + b
 */
-function add(a,b){
-return a+b;
-}
+
 
 /* FUNCTION subtract(a,b)
 * define a function called subtract with two number parameters a and b
 * @param: a, b (integers)
 * @return: a - b
 */
-function subtract(a,b){
-return a-b;
-}
+
 
 /* FUNCTION multiply(a,b)
 * define a function called multiply with two number parameters a and b
 * @param: a, b (integers)
 * @return: a * b (* means multiply)
 */
-function multiply(a,b){
-return a*b;
 
-}
 
 /* FUNCTION divide(a,b)
 * define a function called divide with two number parameters a and b
 * @param: a, b (integers)
 * @return: a / b (/ means divided by)
 */
-function divide(a,b){
-   return a/b;
-}
 
 /* ************************************* */
 
@@ -122,7 +112,6 @@ function divide(a,b){
 /* Initialize Globals
 * Set a global variable myScoops = "Here's your cone with: "
 */
-var myScoops = "Here's your cone with:"
 
 
 /* FUNCTION main()
@@ -132,14 +121,7 @@ var myScoops = "Here's your cone with:"
 * @param: none (main never gets params)
 * @return: none (main never gets returns
 */
-function main(){
-var scoops = prompt("how many scoops(max 3)?");
-if (scoops < 4) scoopLoop(scoops);
-else{
-alert ("oink oink");
-main();
-}
-}
+
 
 /* FUNCTION scoopLoop(scoops)
 * start scoop at 1 and loop while scoop is less than or equal to scoops
@@ -148,12 +130,6 @@ main();
 * @param: scoops (integer)
 * @return: none
 */
-function scoopLoop(scoops){
-for(let scoop = 1;scoop <= scoops; scoop++){
-   myScoop +=nextScoop(scoops);
-}
-alert(myScoops);
-}
 
 
 /* FUNCTION nextScoop(scoop)
