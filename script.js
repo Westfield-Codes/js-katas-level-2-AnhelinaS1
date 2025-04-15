@@ -1,62 +1,70 @@
-/* CALCULATOR KATA */
+/* RANDOM STUDENT KATA:  */
 
-/* This is best done with a JS switch control, though can also be a chain of conditionals. */
+// Who will be gatekeeper and keymaster today?
 
-/* FUNCTION main() 
- * Ask the user what operation they want (+, -, *, /)
- * Ask the user for the first number (a)
- * Parse a as an integer
- * Ask the user for the second number (b)
- * Parse b as an integer
- * Based on the operation, send the numbers to the right function as
- * arguments and store the returned value in variable called result
- * Alert the equation a + operation + b = result
- * @param: none (main never gets params)
- * @return: none (main never gets returns
+/* Global Variables */
+var students = [];
+var picked = [];
+// Create an array called students, start empty. 
+// Create an array called picked, start empty. 
+
+/* Function Main()
+ * Set variable count to asking how many students there are.
+ * Fill global array students by passing count as an argument to addStudents
+ * Set gateKeeper = randStudent(), the name of a random student in the list
+ * Set keymaster = randNewStudent(), name of a different random student
+ * Display gatekeeper name and keymaster name for this kata
+ * @param = none
+ * @return = none 
  */
+  
+  
 function main(){
-    let operation = prompt("what operation do you want (+, -, *, /)?");
-    let a = prompt("Enter the first number");
-     a = parseInt();
-    let b = prompt("Enter the second number");
-     b = parseInt();
+     let count = prompt("How many students here?");
+    addStudents(count);
+let gateKeeper = randStudent();
+let keymaster = randStudent();
+alert("GateKeeper = " + gateKeeper + "and Keymaster = " + keymaster);
 
 }
-/* FUNCTION add(a,b)
- * define a function called add with two number parameters a and b
- * @param: a, b (integers)
- * @return: a + b
+
+/* Function addStudents(count)
+ * use the students array, nothing in it. 
+ * Use a for loop to add student names to the students array.
+ * The loop should run count number of times. 
+ * @param = count {integer}
+ * @return = none
  */
-function add(a,b){
- return a+b;
-}
+function addStudents(count){
+    for(let student= 1;student<=count; student++){
+        student.push (prompt("Next student?"));
 
-/* FUNCTION subtract(a,b)
- * define a function called subtract with two number parameters a and b
- * @param: a, b (integers)
- * @return: a - b
+    }
+
+}
+/* Function randStudent()
+ * Set student = random number, 0 to length of students array.
+ * Set name = element in students array at that random index.
+ * Add name to picked array. 
+ * Return the name of the random student
+ * @param = none
+ * @return = name {string}
  */
-function subtract(a,b){
-return a-b;
-}
-
-/* FUNCTION multiply(a,b)
- * define a function called multiply with two number parameters a and b
- * @param: a, b (integers)
- * @return: a * b (* means multiply)
+ function randStudent(){
+    return "Alina";
+ }
+/* Function randNewStudent() (start with copy of randStudent)
+ * Set student = "" and picked = 0. 
+ * Loop while picked is not equal to -1
+ * Set student = random number, 0 to length of students array.
+ * Set name = element in students array at that random index.
+ * Set picked = the index of that name the picked array. 
+ * End the while loop.
+ * Add name to picked array.
+ * Return the name of the new random student
+ * @param = none
+ * @return = name {string}
  */
-function multiply(a,b){
-return a*b;
-
+function randNewStudent(){
+    return "Anhelina";
 }
-
-/* FUNCTION divide(a,b)
- * define a function called divide with two number parameters a and b
- * @param: a, b (integers)
- * @return: a / b (/ means divided by)
- */
-function divide(a,b){
-    return a/b;
-}
-
-/* ************************************* */
