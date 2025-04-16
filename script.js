@@ -22,7 +22,7 @@ var picked = [];
 function main(){
      let count = prompt("How many students here?");
     addStudents(count);
-let gateKeeper = randStudent();
+let gateKeeper = randStudent(count);
 let keymaster = randStudent();
 alert("GateKeeper = " + gateKeeper + "and Keymaster = " + keymaster);
 
@@ -36,25 +36,28 @@ alert("GateKeeper = " + gateKeeper + "and Keymaster = " + keymaster);
  * @return = none
  */
 function addStudents(count){
-    for(let student= 1;student<=count; student++){
-        student.push (prompt("Next student?"));
+    for(let student = 1; student <= count; student++){
+        students.push(prompt("Next student?"));
 
     }
-
+console.log(students.toString());
 }
 /* Function randStudent()
  * Set student = random number, 0 to length of students array.
  * Set name = element in students array at that random index.
  * Add name to picked array. 
  * Return the name of the random student
- * @param = none
+ * @param = count
  * @return = name {string}
  */
- function randStudent(){
-    return "Alina";
+ function randStudent(count){
+    let student = Math.floor(Math.random()*count);
+let name = students[student];
+picked.push(name);
+    return name;
  }
 /* Function randNewStudent() (start with copy of randStudent)
- * Set student = "" and picked = 0. 
+ * Set name = "" and picked = 0. 
  * Loop while picked is not equal to -1
  * Set student = random number, 0 to length of students array.
  * Set name = element in students array at that random index.
@@ -66,5 +69,16 @@ function addStudents(count){
  * @return = name {string}
  */
 function randNewStudent(){
-    return "Anhelina";
+}let student= 0;
+let pickedYet= 0;
+let name ="";
+while(pickedYet!=-1){
+    student = Math.floor(Math.random()*student.length);
+    let name = students[student];
+
+
 }
+   
+let name = students[student];
+picked.push(name);
+    return name;
