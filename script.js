@@ -11,9 +11,9 @@ var picked = [];
 /* Function Main()
  * Set variable count to asking how many students there are.
  * Fill global array students by passing count as an argument to addStudents
- * Set gateKeeper = randStudent(), the name of a random student in the list
- * Set keymaster = randNewStudent(), name of a different random student
- * Display gatekeeper name and keymaster name for this kata
+ * Set gateKeeper = randStudent(), the ssName of a random student in the list
+ * Set keymaster = randNewStudent(), sName of a different random student
+ * Display gatekeeper sName and keymaster sName for this kata
  * @param = none
  * @return = none 
  */
@@ -22,7 +22,7 @@ var picked = [];
 function main(){
      let count = prompt("How many students here?");
     addStudents(count);
-let gateKeeper = randStudent(count);
+let gateKeeper = randStudent();
 let keymaster = randStudent();
 alert("GateKeeper = " + gateKeeper + "and Keymaster = " + keymaster);
 
@@ -30,55 +30,54 @@ alert("GateKeeper = " + gateKeeper + "and Keymaster = " + keymaster);
 
 /* Function addStudents(count)
  * use the students array, nothing in it. 
- * Use a for loop to add student names to the students array.
+ * Use a for loop to add student sNames to the students array.
  * The loop should run count number of times. 
  * @param = count {integer}
  * @return = none
  */
-function addStudents(count){
+function addStudents(){
     for(let student = 1; student <= count; student++){
         students.push(prompt("Next student?"));
 
     }
-console.log(students.toString());
+console.log(students);
 }
 /* Function randStudent()
  * Set student = random number, 0 to length of students array.
- * Set name = element in students array at that random index.
- * Add name to picked array. 
- * Return the name of the random student
+ * Set sName = element in students array at that random index.
+ * Add sName to picked array. 
+ * Return the sName of the random student
  * @param = count
- * @return = name {string}
+ * @return = sName {string}
  */
  function randStudent(count){
-    let student = Math.floor(Math.random()*count);
-let name = students[student];
-picked.push(name);
-    return name;
+    let student = Math.floor(Math.random()*students.length);
+let sName = students[student];
+students.splice(student);
+    return sName;
  }
 /* Function randNewStudent() (start with copy of randStudent)
- * Set name = "" and picked = 0. 
+ * Set sName = "" and picked = 0. 
  * Loop while picked is not equal to -1
  * Set student = random number, 0 to length of students array.
- * Set name = element in students array at that random index.
- * Set picked = the index of that name the picked array. 
+ * Set sName = element in students array at that random index.
+ * Set picked = the index of that sName the in the picked array. 
  * End the while loop.
- * Add name to picked array.
- * Return the name of the new random student
+ * Add sName to picked array.
+ * Return the sName of the new random student
  * @param = none
- * @return = name {string}
+ * @return = sName {string}
  */
 function randNewStudent(){
-}let student= 0;
+let student= 0;
 let pickedYet= 0;
-let name ="";
+let sName ="";
 while(pickedYet!=-1){
-    student = Math.floor(Math.random()*student.length);
-    let name = students[student];
-
-
+    student = Math.floor(Math.random()*students.length);
+    sName = students(student);
+    pickedYet = picked.indexOf(sName);
 }
-   
-let name = students[student];
-picked.push(name);
-    return name;
+//let sName = students[student];
+picked.push(sName);
+    return sName;
+}
