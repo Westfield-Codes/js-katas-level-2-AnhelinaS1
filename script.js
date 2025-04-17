@@ -24,7 +24,7 @@ function main(){
     addStudents(count);
 let gateKeeper = randStudent();
 let keymaster = randStudent();
-alert("GateKeeper = " + gateKeeper + "and Keymaster = " + keymaster);
+alert("GateKeeper = " + gateKeeper + " and Keymaster = " + keymaster);
 
 }
 
@@ -35,7 +35,7 @@ alert("GateKeeper = " + gateKeeper + "and Keymaster = " + keymaster);
  * @param = count {integer}
  * @return = none
  */
-function addStudents(){
+function addStudents(count){
     for(let student = 1; student <= count; student++){
         students.push(prompt("Next student?"));
 
@@ -50,10 +50,12 @@ console.log(students);
  * @param = count
  * @return = sName {string}
  */
- function randStudent(count){
+ function randStudent(){
     let student = Math.floor(Math.random()*students.length);
 let sName = students[student];
+console.log(students.toString());
 students.splice(student);
+console.log(students.toString());
     return sName;
  }
 /* Function randNewStudent() (start with copy of randStudent)
