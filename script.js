@@ -1,85 +1,44 @@
-/* RANDOM STUDENT KATA:  */
+/* SHOPPING LIST KATA:  */
 
-// Who will be gatekeeper and keymaster today?
+// Every day, you are sent to buy 5 items. 
 
-/* Global Variables */
-var students = [];
-var picked = [];
-// Create an array called students, start empty. 
-// Create an array called picked, start empty. 
-
-/* Function Main()
- * Set variable count to asking how many students there are.
- * Fill global array students by passing count as an argument to addStudents
- * Set gateKeeper = randStudent(), the ssName of a random student in the list
- * Set keymaster = randNewStudent(), sName of a different random student
- * Display gatekeeper sName and keymaster sName for this kata
- * @param = none
- * @return = none 
- */
-  
-  
+/* 1. for loop and string concatenation */
 function main(){
-     let count = prompt("How many students here?");
-    addStudents(count);
-let gateKeeper = randStudent();
-let keymaster = randStudent();
-alert("GateKeeper = " + gateKeeper + " and Keymaster = " + keymaster);
-
+    makeList();
 }
-
-/* Function addStudents(count)
- * use the students array, nothing in it. 
- * Use a for loop to add student sNames to the students array.
- * The loop should run count number of times. 
- * @param = count {integer}
- * @return = none
+/* Function makeList()
+ * Create a shopping list string called shoppingList as "To Buy:"
+ * create a five-item loop, and in the loop, 
+ * ask for next item to buy (item #), and add it to the list 
+ * add a line break after each item added
+ * when loop's done, alert the list
+ * \n = line brake
  */
-function addStudents(count){
-    for(let student = 1; student <= count; student++){
-        students.push(prompt("Next student?"));
-
-    }
-console.log(students);
-}
-/* Function randStudent()
- * Set student = random number, 0 to length of students array.
- * Set sName = element in students array at that random index.
- * Add sName to picked array. 
- * Return the sName of the random student
- * @param = count
- * @return = sName {string}
- */
- function randStudent(){
-    let student = Math.floor(Math.random()*students.length);
-let sName = students[student];
-console.log(students.toString());
-students.splice(student);
-console.log(students.toString());
-    return sName;
+ function makeList(){
+let shoppingList = "to buy; \n";
+for(let item = 1; item<= 5; item++){
+    shoppingList+=(prompt("item" + item +" \n" ));
  }
-/* Function randNewStudent() (start with copy of randStudent)
- * Set sName = "" and picked = 0. 
- * Loop while picked is not equal to -1
- * Set student = random number, 0 to length of students array.
- * Set sName = element in students array at that random index.
- * Set picked = the index of that sName the in the picked array. 
- * End the while loop.
- * Add sName to picked array.
- * Return the sName of the new random student
- * @param = none
- * @return = sName {string}
- */
-function randNewStudent(){
-let student= 0;
-let pickedYet= 0;
-let sName ="";
-while(pickedYet!=-1){
-    student = Math.floor(Math.random()*students.length);
-    sName = students(student);
-    pickedYet = picked.indexOf(sName);
+ alert( shoppingList);
 }
-//let sName = students[student];
-picked.push(sName);
-    return sName;
-}
+/* 2. for loop and array with toString */
+
+/* Same function, using previous code, BUT:
+ * build shopArray variable for the shopping list
+ * adjust loop to work with the array index values (start at 0)
+ * ask for next list item and push it to the shopArray
+ * no need to add a line break after
+ * at end of loop, alert the list title, followed by
+ * the list with toString() method (it won't have line breaks)*/
+
+/* 3. for loop and array with join method 
+
+/* Same function, using previous code, BUT:
+ * the at end, alert list with array.join() method with line breaks 
+ * instead of commas */
+ 
+/* 4. loops, arrays and functions */
+
+/* Same function, using previous code, but THIS TIME:
+ * store each item as a numbered item ["1. cookies","2. donuts"])   
+ * using the loop index. */
