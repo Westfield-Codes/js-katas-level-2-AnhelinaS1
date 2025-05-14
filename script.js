@@ -15,16 +15,20 @@ function main(){
  * \n = line brake
  */
  function makeList(){
-let shoppingList = "to buy; \n";
+ let shopArray = [];
+
+let shoppingList = "to buy: \n";
+let shoparray = [];
 for(let item = 1; item<= 5; item++){
-    shoppingList+=(prompt("item" + item +" \n" ));
+   shopArray.push(prompt("item" + item ));
  }
- alert( shoppingList);
+ alert( shoppingList + shopArray.join("\n") );
 }
 /* 2. for loop and array with toString */
 
 /* Same function, using previous code, BUT:
  * build shopArray variable for the shopping list
+
  * adjust loop to work with the array index values (start at 0)
  * ask for next list item and push it to the shopArray
  * no need to add a line break after
